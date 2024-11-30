@@ -1,0 +1,22 @@
+.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    &__logo {
+        a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            span{
+                font-size: 25px;
+            }
+        }
+
+        img {
+            width: 50px;
+        }
+    }
+}

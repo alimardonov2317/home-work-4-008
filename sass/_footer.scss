@@ -1,0 +1,30 @@
+.footer {
+    background: #c9cace;
+    padding: 30px 0;
+
+    &__navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__collection {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__link {
+        :hover {
+            transform: scale(1.05);
+            transition: all .5s;
+        }
+    }
+}
+@media(max-width: 375px){
+    .footer{
+        &__navbar{
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

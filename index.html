@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar__logo">
+                    <a href="#"><img src="./assets/logo.svg" alt="logo"><span>JavaScript</span></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Hero -->
+        <div class="hero">
+            <div class="container">
+                <div class="hero__wrapper">
+                    <div class="hero__content">
+                        <h2 class="hero__title">Map va Set</h2>
+                        <p class="hero__desc">JavaScriptda Map va Set obyektlari ko'pincha ma'lumotlarni tuzilmalash va qayta ishlash uchun ishlatiladi.Bu obyektlar, katta hajmdagi ma'lumotlarni samarali boshqarish va izlash uchun juda qulaydir.Map: Kalit-qiymat (key-value) juftlarini boshqaradi.Set: Takrorlanmas (unikal) qiymatlarni boshqaradi.</p>
+                    </div>
+                    <div class="hero__image">
+                        <img src="./assets/hero.png" alt="hero">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Array -->
+         <section class="array">
+            <div class="container">
+                <div class="array__text">
+                    <h2 class="array__title">Map vs Set Types</h2>
+                </div>
+                <div class="array__card-wrapper">
+                    <div class="array__card">
+                           <p><span class="array__top">Map methods</span> <span class="array__desc">set(key, value): Kalit-qiymat juftini qo'shadi yoki yangilaydi. <br>get(key): Kalitga mos qiymatni qaytaradi. <br> has(key): Kalit mavjudligini tekshiradi. <br> delete(key): Kalit-qiymat juftini o'chiradi. <br> clear(): Hammasini tozalaydi. <br>size: Elementlar sonini qaytaradi.</span></p>
+                           <p class="array__code">
+                            <span class="array__blue">let</span> map = <span class="array__blue">new</span> <span class="array__red">Map()</span> <br> map.<span class="array__red">set</span>( "a", 1 ); <br> map.<span class="array__red">set</span>( "b", 2 );<br> map.<span class="array__red">set</span>( "c", 3 ); <br> <br> <span class="array__green">console.log</span>(map.<span class="array__red">get</span>("a")); <span class="array__comm">// Natija: 1</span> <br><span class="array__green">console.log</span>(map.<span class="array__red">has</span>("b")); <span class="array__comm">// Natija: true</span> <br><span class="array__green">console.log</span>(map.<span class="array__red">size</span>); <span class="array__comm">// Natija: 3</span> <br> <br> map.<span class="array__red">delete</span>("c"); <br> <span class="array__green">console.log</span>( map.<span class="array__red">size</span> ) <span class="array__comm">// Natija: 2 c o'chirildi</span> <br> <br> map.<span class="array__red">clear</span>(); <br> <span class="array__green">console.log</span>( map.<span class="array__red">size</span> ) <span class="array__comm">// Natija: 0 barcha elemnt o'chirildi</span>
+                           </p>
+                           <div class="array__card-comm">
+                            <span class="array__top">Izoh</span> 
+                            <span class="array__green">set(key, value): </span>Kalit-qiymat juftini qo'shadi (a: 1, b: 2, c: 3). <br>
+                            <span class="array__green">get(key): </span>Kalit a uchun qiymatni qaytaradi (1). <br>
+                            <span class="array__green">has(key): </span>Kalit b mavjudligini tekshiradi (true). <br>
+                            <span class="array__green">delete(key): </span>Kalit cni o'chiradi, natijada hajmi 2 bo'ladi. <br>
+                            <span class="array__green">clear(): </span>Barcha elementlarni o'chiradi, natijada hajmi 0 bo'ladi.<br>
+                           </div>
+                    </div>
+                    <div class="array__card">
+                           <p><span class="array__top">Set methods</span> <span class="array__desc">add(value): Qiymatni qo'shadi. <br>has(value): Qiymat mavjudligini tekshiradi. <br>delete(value): Qiymatni o'chiradi. <br>clear(): Hammasini tozalaydi. <br>size: Elementlar sonini qaytaradi. <br></span></p>
+                           <p class="array__code">
+                            <span class="array__blue">let</span> set = <span class="array__blue">new</span> <span class="array__red">Set()</span> <br> set.<span class="array__red">add</span>( 1 ); <br> set.<span class="array__red">add</span>( 2 );<br> set.<span class="array__red">add</span>( 3 );<br>set.<span class="array__red">add</span>( 1 ); <span class="array__comm">// 1 allaqachon mavjud</span> <br> <br> <span class="array__green">console.log</span>(set.<span class="array__red">has</span>(1)); <span class="array__comm">// Natija: true</span> <br><span class="array__green">console.log</span>(set.<span class="array__red">has</span>(4)); <span class="array__comm">// Natija: false</span> <br><span class="array__green">console.log</span>(set.<span class="array__red">size</span>); <span class="array__comm">// Natija: 3</span> <br> <br> set.<span class="array__red">delete</span>(2); <br> <span class="array__green">console.log</span>( set.<span class="array__red">size</span> ) <span class="array__comm">// Natija: 2 </span> <br> <br> set.<span class="array__red">clear</span>(); <br> <span class="array__green">console.log</span>( set.<span class="array__red">size</span> ) <span class="array__comm">// Natija: 0 barcha element o'chirildi</span>
+                           </p>
+                           <div class="array__card-comm">
+                            <span class="array__top">Izoh</span> 
+                            <span class="array__green">add(value): </span>Qiymatlarni qo'shadi (1, 2, 3). <br>
+                            <span class="array__green">has(value): </span>Qiymat 1 mavjudligini tekshiradi (true). <br>
+                            <span class="array__green">delete(value): </span>Qiymat 2 ni o'chiradi, natijada hajmi 2 bo'ladi. <br>
+                            <span class="array__green">clear(): </span>Barcha elementlarni o'chiradi, natijada hajmi 0 bo'ladi.<br>
+                           </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+        </main>
+         <!-- Footer -->
+          <footer class="footer">
+            <div class="container">
+                <nav class="footer__navbar">
+                        <div class="navbar__logo">
+                            <a href="#"><img src="./assets/logo.svg" alt="logo"><span>JavaScript</span></a>
+                        </div>
+                        <ul class="footer__collection">
+                               <li class="footer__item">
+                                <a target="_blank" href="https://t.me/samandar_2317" class="footer__link">
+                                    <i class="fa-brands fa-telegram fa-2xl" style="color: #121212;"></i>
+                                </a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__link">
+                                        <i class="fa-brands fa-facebook fa-2xl" style="color: #000000;"></i>
+                                    </a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__link">
+                                        <i class="fa-brands fa-square-instagram fa-2xl" style="color: #050505;"></i>
+                                    </a>
+                                </li>
+                            
+                        </ul>
+                </nav>
+                
+            </div>
+          </footer>
+
+          <script type="module" src="./main.js"></script>
+</body>
+</html>
