@@ -55,19 +55,3 @@ console.log(organization.getInfo());
 organization.name = "IT Park";
 console.log(organization.getInfo());
 
-
-
-let map = new Map();
-map.set('a', 1);
-map.set('b', 2);
-map.set('c', 3);
-
-console.log(map.get('a')); // Natija: 1
-console.log(map.has('b')); // Natija: true
-console.log(map.size); // Natija: 3
-
-map.delete('c');
-console.log(map.size); // Natija: 2
-
-map.clear();
-console.log(map.size); // Natija: 0
